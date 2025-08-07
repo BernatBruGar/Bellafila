@@ -189,7 +189,7 @@ h1, h2, h3 {
     display: flex;
     align-items: center;
     background: linear-gradient(135deg, var(--cream) 0%, var(--white) 100%);
-    padding: 100px 20px 50px;
+    padding: 100px 20px 10px; /* abans 100px 20px 50px; ara menys padding bottom */
 }
 
 .hero-content {
@@ -211,8 +211,13 @@ h1, h2, h3 {
 
 .hero-buttons {
     display: flex;
-    gap: 1rem;
+    gap: 0.7rem;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 0.2rem;
+    margin-bottom: 0.5rem; /* afegit per reduir espai sota els botons */
 }
 
 .cta-button {
@@ -1174,6 +1179,7 @@ h1, h2, h3 {
         flex-direction: column;
         text-align: center;
         padding-top: 120px;
+        padding-bottom: 5px; /* afegit per reduir espai en mòbil */
     }
     
     .hero h1 {
@@ -1185,7 +1191,7 @@ h1, h2, h3 {
     }
     
     .hero-buttons {
-        justify-content: center;
+        margin-bottom: 0.3rem; /* encara menys espai en mòbil */
     }
     
     .cta-button {
@@ -1323,58 +1329,75 @@ h1, h2, h3 {
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(120deg,rgba(30,58,95,0.55) 0%,rgba(212,175,55,0.18) 100%);
+    background: linear-gradient(120deg,rgba(30,58,95,0.65) 0%,rgba(212,175,55,0.22) 100%);
     z-index: 1;
     pointer-events: none;
 }
 
+/* Desktop/tablet: rectangle blanc centrat */
 .hero-content-overlay {
     position: relative;
     z-index: 2;
     margin: 0 auto;
     text-align: center;
-    background: rgba(255,255,255,0.44);
-    border-radius: 32px;
-    padding: 3.5rem 2.5rem 2.5rem 2.5rem;
-    max-width: 540px;
+    background: rgba(255,255,255,0.85);
+    border-radius: 28px;
+    padding: 2.5rem 2rem;
+    max-width: 420px;
+    min-width: 220px;
+    width: 90vw;
+    min-height: 320px;
+    max-height: calc(90vh - 50px); /* Limita la altura per deixar espai sota */
     box-shadow: 0 8px 32px rgba(30,58,95,0.18);
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     animation: fadeInHeroText 1.2s ease;
-    backdrop-filter: blur(2.5px);
+    backdrop-filter: blur(3px);
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    margin-bottom: 50px; /* Añade marge inferior fixe per evitar que toqui el final */
+    padding-bottom: 2rem; /* Ajusta aquest valor si vols més o menys espai intern */
 }
 
 .hero-content-overlay h1 {
-    font-size: 4rem;
+    font-size: 3.2rem; /* abans 2.2rem */
     color: var(--navy-blue);
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.1rem;
     font-family: 'Playfair Display', serif;
     text-shadow: 0 4px 24px rgba(30,58,95,0.10);
+    font-weight: 700;
+    line-height: 1.1;
+    word-break: break-word;
 }
 
 .hero-content-overlay p {
-    font-size: 1.5rem;
-    color: #1e3a5f;
-    margin-bottom: 2.5rem;
-    text-shadow: 0 2px 12px rgba(30,58,95,0.10);
+    font-size: 1.1rem;
+    color: var(--dark-gray);
+    margin-bottom: 1.5rem;
+    text-shadow: 0 2px 12px rgba(30,58,95,0.08);
+    font-weight: 500;
+    line-height: 1.3;
+    word-break: break-word;
 }
 
 .hero-buttons {
     display: flex;
-    gap: 1.2rem;
+    gap: 0.7rem;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-top: 0.5rem;
+    margin-top: 0.2rem;
+    margin-bottom: 0.5rem; /* afegit per reduir espai sota els botons */
 }
 
 .cta-button {
-    padding: 16px 38px;
+    padding: 12px 22px;
     border: none;
     border-radius: 30px;
-    font-size: 1.18rem;
+    font-size: 1rem;
     cursor: pointer;
     transition: all 0.3s;
     text-decoration: none;
@@ -1385,6 +1408,10 @@ h1, h2, h3 {
     box-shadow: 0 2px 12px rgba(30,58,95,0.10);
     margin: 0 auto;
     outline: none;
+    background: var(--gold);
+    color: var(--navy-blue);
+    border: 2px solid var(--gold);
+    min-width: 120px;
 }
 
 .cta-button.primary {
@@ -1401,7 +1428,7 @@ h1, h2, h3 {
 }
 
 .cta-button.secondary {
-    background: rgba(255,255,255,0.18);
+    background: var(--navy-blue);
     color: var(--gold);
     border: 2px solid var(--gold);
 }
@@ -1413,41 +1440,186 @@ h1, h2, h3 {
     border-color: var(--gold);
 }
 
-@media (max-width: 900px) {
-    .hero-content-overlay {
-        padding: 2.2rem 1.2rem 1.5rem 1.2rem;
-        max-width: 98vw;
-    }
-    .hero-content-overlay h1 {
-        font-size: 2.5rem;
-    }
-    .hero-content-overlay p {
-        font-size: 1.1rem;
-    }
+/* --- MOBILE HERO ESTÈTICA DIFERENT --- */
+@media (max-width: 770px) {
     .hero-bg {
         min-height: 60vh;
+        padding: 0;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-start; /* Cambia flex-end a flex-start per
+        position: relative;
+        background: none;
+        box-shadow: none;
+        border-radius: 0;
+        padding: 0;
+        max-width: 100vw;
+        min-width: 0;
+        min-height: 0;
+        width: 100vw;
+        aspect-ratio: unset;
+        top: unset;
+        left: unset;
+        right: unset;
+        bottom: unset;
+        overflow: visible;
+        align-items: flex-start;
+        justify-content: flex-start; /* Cambia flex-end a flex-start */
+        animation: none;
+        backdrop-filter: none;
     }
-}
-
-@media (max-width: 600px) {
-    .hero-content-overlay {
-        padding: 1.2rem 0.5rem 1rem 0.5rem;
-        border-radius: 18px;
+    .hero-content-overlay::before {
+        content: "";
+        display: block;
+        width: 100vw;
+        height: 55vw;
+        min-height: 180px;
+        max-height: 320px;
+        background: url("../Img/Rest_13.jpg") center top/cover no-repeat;
+        filter: brightness(0.7) saturate(1.1);
+        border-bottom-left-radius: 32vw;
+        border-bottom-right-radius: 32vw;
+        margin-bottom: 0.3rem;
+        margin-top: 0;
+        transform: translateY(-8vw);
+    }
+    .hero-content-overlay h1,
+    .hero-content-overlay p,
+    .hero-buttons {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        width: 100vw;
+        margin-left: 0;
+        margin-right: 0;
     }
     .hero-content-overlay h1 {
-        font-size: 1.5rem;
+        font-size: 2.2rem; /* abans 1.5rem */
+        color: var(--navy-blue);
+        margin-top: 0.3rem;
+        margin-bottom: 0.5rem;
+        text-shadow: 0 2px 10px #fff, 0 2px 10px #fff;
     }
     .hero-content-overlay p {
         font-size: 1rem;
-    }
-    .cta-button {
-        width: 100%;
-        max-width: 250px;
-        font-size: 1rem;
-        padding: 12px 0;
+        color: var(--dark-gray);
+        margin-bottom: 1rem;
+        text-shadow: 0 2px 10px #fff, 0 2px 10px #fff;
     }
     .hero-buttons {
         flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+        margin-bottom: 1.2rem;
+    }
+    .cta-button {
+        width: 90vw;
+        max-width: 320px;
+        font-size: 1rem;
+        padding: 12px 0;
+        min-width: 0;
+    }
+}
+
+/* Visual Menu Grid */
+.visual-menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    margin: 0 auto;
+    padding: 1.5rem 0;
+    max-width: 1200px;
+}
+
+.visual-menu-item {
+    background: var(--white);
+    border-radius: 18px;
+    box-shadow: 0 4px 18px rgba(30,58,95,0.10);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    transition: box-shadow 0.2s;
+    border: 1.5px solid #e3e0d8;
+}
+
+.visual-menu-img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    background: var(--cream);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.visual-menu-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+    display: block;
+}
+
+.visual-menu-item:hover .visual-menu-img img {
+    transform: scale(1.06);
+}
+
+.visual-menu-info {
+    padding: 1.2rem 1.2rem 1.1rem 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1 1 auto;
+}
+
+.visual-menu-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.18rem;
+    color: var(--navy-blue);
+    margin: 0 0 0.3rem 0;
+    font-weight: 700;
+}
+
+.visual-menu-desc {
+    font-size: 0.98rem;
+    color: var(--dark-gray);
+    opacity: 0.88;
+    margin-bottom: 0.4rem;
+    flex: 1 1 auto;
+}
+
+.visual-menu-price {
+    font-size: 1.12rem;
+    color: var(--gold);
+    font-weight: 700;
+    margin-top: 0.2rem;
+    text-align: right;
+}
+
+@media (max-width: 900px) {
+    .visual-menu-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.2rem;
+        padding: 1rem 0;
+    }
+}
+@media (max-width: 600px) {
+    .visual-menu-grid {
+        grid-template-columns: 1fr;
         gap: 0.7rem;
+        padding: 0.5rem 0;
+    }
+    .visual-menu-info {
+        padding: 0.8rem 0.7rem 0.7rem 0.7rem;
+    }
+    .visual-menu-info h3 {
+        font-size: 1.04rem;
+    }
+    .visual-menu-desc {
+        font-size: 0.93rem;
+    }
+    .visual-menu-price {
+        font-size: 1rem;
     }
 }
