@@ -4,6 +4,9 @@ document.addEventListener('DOMContentLoaded', function() {
     setupReservationForm();
     setupSmoothScrolling();
     setupHamburgerMenu();
+    setupHeroSlider();
+    setupVisualHero();
+    setupVisualHero('visualHero2', 'vhDots2');
 });
 
 // Función para cargar platos del menú
@@ -58,6 +61,46 @@ const translations = {
             subtitle: 'Experiencia culinaria clásica con un toque moderno',
             reserve: 'Reservar Mesa',
             menu: 'Ver Menú'
+        },
+        about: {
+            title: 'Sobre Bellafila',
+            subtitle: 'Un espacio único donde la tradición y la innovación se encuentran',
+            interior: {
+                title: 'Ambiente Elegante',
+                text: 'Espacios diseñados para crear experiencias únicas'
+            },
+            decoration: {
+                title: 'Detalles Únicos',
+                text: 'Cada rincón cuenta una historia'
+            },
+            atmosphere: {
+                title: 'Calidez',
+                text: 'Un refugio gastronómico'
+            },
+            dining: {
+                title: 'Sala Principal',
+                text: 'El epicentro de la experiencia Bellafila'
+            },
+            elegance: {
+                title: 'Sofisticación'
+            },
+            design: {
+                title: 'Diseño'
+            },
+            style: {
+                title: 'Estilo'
+            },
+            refinement: {
+                title: 'Refinamiento'
+            },
+            experience: {
+                title: 'Una Experiencia Completa',
+                text: 'Donde cada momento se convierte en un recuerdo especial'
+            },
+            architecture: {
+                title: 'Arquitectura',
+                text: 'Belleza en cada detalle'
+            }
         },
         gallery: {
             title: 'Galería'
@@ -138,6 +181,46 @@ const translations = {
             reserve: 'Reservar Taula',
             menu: 'Veure Menú'
         },
+        about: {
+            title: 'Sobre Bellafila',
+            subtitle: 'Un espai únic on la tradició i la innovació es troben',
+            interior: {
+                title: 'Ambient Elegant',
+                text: 'Espais dissenyats per crear experiències úniques'
+            },
+            decoration: {
+                title: 'Detalls Únics',
+                text: 'Cada racó conta una història'
+            },
+            atmosphere: {
+                title: 'Calidesa',
+                text: 'Un refugi gastronòmic'
+            },
+            dining: {
+                title: 'Sala Principal',
+                text: 'L\'epicentre de l\'experiència Bellafila'
+            },
+            elegance: {
+                title: 'Sofisticació'
+            },
+            design: {
+                title: 'Disseny'
+            },
+            style: {
+                title: 'Estil'
+            },
+            refinement: {
+                title: 'Refinament'
+            },
+            experience: {
+                title: 'Una Experiència Completa',
+                text: 'On cada moment es converteix en un record especial'
+            },
+            architecture: {
+                title: 'Arquitectura',
+                text: 'Bellesa en cada detall'
+            }
+        },
         gallery: {
             title: 'Galeria'
         },
@@ -217,6 +300,46 @@ const translations = {
             reserve: 'Book Table',
             menu: 'View Menu'
         },
+        about: {
+            title: 'About Bellafila',
+            subtitle: 'A unique space where tradition and innovation meet',
+            interior: {
+                title: 'Elegant Atmosphere',
+                text: 'Spaces designed to create unique experiences'
+            },
+            decoration: {
+                title: 'Unique Details',
+                text: 'Every corner tells a story'
+            },
+            atmosphere: {
+                title: 'Warmth',
+                text: 'A gastronomic refuge'
+            },
+            dining: {
+                title: 'Main Dining Room',
+                text: 'The epicenter of the Bellafila experience'
+            },
+            elegance: {
+                title: 'Sophistication'
+            },
+            design: {
+                title: 'Design'
+            },
+            style: {
+                title: 'Style'
+            },
+            refinement: {
+                title: 'Refinement'
+            },
+            experience: {
+                title: 'A Complete Experience',
+                text: 'Where every moment becomes a special memory'
+            },
+            architecture: {
+                title: 'Architecture',
+                text: 'Beauty in every detail'
+            }
+        },
         gallery: {
             title: 'Gallery'
         },
@@ -295,6 +418,46 @@ const translations = {
             subtitle: 'Expérience culinaire classique avec une touche moderne',
             reserve: 'Réserver Table',
             menu: 'Voir Menu'
+        },
+        about: {
+            title: 'À Propos de Bellafila',
+            subtitle: 'Un espace unique où tradition et innovation se rencontrent',
+            interior: {
+                title: 'Atmosphère Élégante',
+                text: 'Des espaces conçus pour créer des expériences uniques'
+            },
+            decoration: {
+                title: 'Détails Uniques',
+                text: 'Chaque coin raconte une histoire'
+            },
+            atmosphere: {
+                title: 'Chaleur',
+                text: 'Un refuge gastronomique'
+            },
+            dining: {
+                title: 'Salle Principale',
+                text: 'L\'épicentre de l\'expérience Bellafila'
+            },
+            elegance: {
+                title: 'Sophistication'
+            },
+            design: {
+                title: 'Design'
+            },
+            style: {
+                title: 'Style'
+            },
+            refinement: {
+                title: 'Raffinement'
+            },
+            experience: {
+                title: 'Une Expérience Complète',
+                text: 'Où chaque moment devient un souvenir spécial'
+            },
+            architecture: {
+                title: 'Architecture',
+                text: 'Beauté dans chaque détail'
+            }
         },
         gallery: {
             title: 'Galerie'
@@ -652,4 +815,122 @@ function scrollToSection(sectionId) {
             block: 'start'
         });
     }
+}
+
+function setupHeroSlider() {
+    const slides = document.querySelectorAll('.hero-slider .slider-slide');
+    const prevBtn = document.getElementById('sliderPrev');
+    const nextBtn = document.getElementById('sliderNext');
+    if (!slides.length || !prevBtn || !nextBtn) return;
+
+    let current = 0;
+    let autoSlide;
+
+    function showSlide(idx) {
+        slides.forEach((slide, i) => {
+            slide.classList.toggle('active', i === idx);
+        });
+        current = idx;
+    }
+
+    function nextSlide() {
+        showSlide((current + 1) % slides.length);
+    }
+
+    function prevSlide() {
+        showSlide((current - 1 + slides.length) % slides.length);
+    }
+
+    nextBtn.addEventListener('click', () => {
+        nextSlide();
+        resetAuto();
+    });
+    prevBtn.addEventListener('click', () => {
+        prevSlide();
+        resetAuto();
+    });
+
+    function resetAuto() {
+        clearInterval(autoSlide);
+        autoSlide = setInterval(nextSlide, 6000);
+    }
+
+    autoSlide = setInterval(nextSlide, 6000);
+
+    // Optional: swipe support for mobile
+    let startX = null;
+    slides.forEach(slide => {
+        slide.addEventListener('touchstart', e => {
+            startX = e.touches[0].clientX;
+        });
+        slide.addEventListener('touchend', e => {
+            if (startX === null) return;
+            let endX = e.changedTouches[0].clientX;
+            if (endX - startX > 50) prevSlide();
+            else if (startX - endX > 50) nextSlide();
+            resetAuto();
+            startX = null;
+        });
+    });
+}
+
+function setupVisualHero(sectionId = 'visualHero', dotsId = 'vhDots') {
+    const slides = document.querySelectorAll(`#${sectionId} .vh-slide`);
+    const dotsContainer = document.getElementById(dotsId);
+    if (!slides.length || !dotsContainer) return;
+
+    let current = 0;
+    let autoSlide;
+
+    // Dots
+    dotsContainer.innerHTML = '';
+    slides.forEach((_, i) => {
+        const dot = document.createElement('div');
+        dot.className = 'vh-dot' + (i === 0 ? ' active' : '');
+        dot.addEventListener('click', () => {
+            showSlide(i);
+            resetAuto();
+        });
+        dotsContainer.appendChild(dot);
+    });
+    const dots = dotsContainer.querySelectorAll('.vh-dot');
+
+    function showSlide(idx) {
+        slides.forEach((slide, i) => {
+            slide.classList.toggle('active', i === idx);
+            dots[i].classList.toggle('active', i === idx);
+        });
+        current = idx;
+    }
+
+    function nextSlide() {
+        showSlide((current + 1) % slides.length);
+    }
+
+    function resetAuto() {
+        clearInterval(autoSlide);
+        autoSlide = setInterval(nextSlide, 5000);
+    }
+
+    autoSlide = setInterval(nextSlide, 5000);
+
+    // Swipe support
+    let startX = null;
+    slides.forEach(slide => {
+        slide.addEventListener('touchstart', e => {
+            startX = e.touches[0].clientX;
+        });
+        slide.addEventListener('touchend', e => {
+            if (startX === null) return;
+            let endX = e.changedTouches[0].clientX;
+            if (endX - startX > 50) {
+                showSlide((current - 1 + slides.length) % slides.length);
+                resetAuto();
+            } else if (startX - endX > 50) {
+                nextSlide();
+                resetAuto();
+            }
+            startX = null;
+        });
+    });
 }
