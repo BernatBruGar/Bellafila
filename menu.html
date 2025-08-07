@@ -37,7 +37,13 @@
     <section id="menu" class="menu-section">
         <div class="container">
             <h2 data-translate="menu.title">El Nostre Menú</h2>
-            <div class="menu-simple">
+            <!-- Selector de tipus de menú -->
+            <div class="menu-type-selector">
+                <button id="btnMenuSimple" class="cta-button primary">Menú Simple</button>
+                <button id="btnMenuVisual" class="cta-button secondary">Menú Visual</button>
+            </div>
+            <!-- Menú Simple -->
+            <div class="menu-simple" id="menuSimple">
                 <!-- Para Picar -->
                 <div class="menu-category-simple">
                     <h3 class="menu-category-title" data-translate="menu.appetizers.title">Per Picar</h3>
@@ -168,6 +174,60 @@
                     </div>
                 </div>
             </div>
+            <!-- Menú Visual -->
+            <div class="visual-menu-grid" id="menuVisual" style="display:none;">
+                <div class="visual-menu-item">
+                    <div class="visual-menu-img">
+                        <img src="Img/Plat_1.jpg" alt="Plat 1">
+                    </div>
+                    <div class="visual-menu-info">
+                        <h3>Croqueta de gamba</h3>
+                        <div class="visual-menu-desc">Deliciosa croqueta de gamba amb beixamel suau i arrebossat cruixent.</div>
+                        <div class="visual-menu-price">4,5€</div>
+                    </div>
+                </div>
+                <div class="visual-menu-item">
+                    <div class="visual-menu-img">
+                        <img src="Img/Plat_2.jpg" alt="Plat 2">
+                    </div>
+                    <div class="visual-menu-info">
+                        <h3>Snack d'orella de porc</h3>
+                        <div class="visual-menu-desc">Orella de porc cruixent amb salsa especial de la casa.</div>
+                        <div class="visual-menu-price">7,5€</div>
+                    </div>
+                </div>
+                <div class="visual-menu-item">
+                    <div class="visual-menu-img">
+                        <img src="Img/Plat_3.jpg" alt="Plat 3">
+                    </div>
+                    <div class="visual-menu-info">
+                        <h3>Anxova del Cantàbric amb oli d'oliva</h3>
+                        <div class="visual-menu-desc">Anxoves seleccionades servides amb oli d'oliva verge extra.</div>
+                        <div class="visual-menu-price">7€</div>
+                    </div>
+                </div>
+                <div class="visual-menu-item">
+                    <div class="visual-menu-img">
+                        <img src="Img/Plat_4.jpg" alt="Plat 4">
+                    </div>
+                    <div class="visual-menu-info">
+                        <h3>Ostra amb cirera</h3>
+                        <div class="visual-menu-desc">Ostra fresca maridada amb cirera de temporada.</div>
+                        <div class="visual-menu-price">4,75€</div>
+                    </div>
+                </div>
+                <div class="visual-menu-item">
+                    <div class="visual-menu-img">
+                        <img src="Img/Plat_5.jpg" alt="Plat 5">
+                    </div>
+                    <div class="visual-menu-info">
+                        <h3>Anguila fumada amb poma escalivada i col</h3>
+                        <div class="visual-menu-desc">Anguila fumada sobre llit de poma escalivada i col tendra.</div>
+                        <div class="visual-menu-price">14€</div>
+                    </div>
+                </div>
+                <!-- Pots afegir més plats amb Plat_6.jpg ... Plat_41.jpg -->
+            </div>
         </div>
     </section>
 
@@ -191,5 +251,32 @@
     </footer>
 
     <script src="scripts/main.js"></script>
+    <script>
+        // Selector menú simple/visual
+        document.addEventListener('DOMContentLoaded', function() {
+            var btnSimple = document.getElementById('btnMenuSimple');
+            var btnVisual = document.getElementById('btnMenuVisual');
+            var menuSimple = document.getElementById('menuSimple');
+            var menuVisual = document.getElementById('menuVisual');
+            if (btnSimple && btnVisual && menuSimple && menuVisual) {
+                btnSimple.addEventListener('click', function() {
+                    menuSimple.style.display = '';
+                    menuVisual.style.display = 'none';
+                    btnSimple.classList.add('primary');
+                    btnSimple.classList.remove('secondary');
+                    btnVisual.classList.remove('primary');
+                    btnVisual.classList.add('secondary');
+                });
+                btnVisual.addEventListener('click', function() {
+                    menuSimple.style.display = 'none';
+                    menuVisual.style.display = '';
+                    btnVisual.classList.add('primary');
+                    btnVisual.classList.remove('secondary');
+                    btnSimple.classList.remove('primary');
+                    btnSimple.classList.add('secondary');
+                });
+            }
+        });
+    </script>
 </body>
 </html>

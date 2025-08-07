@@ -211,13 +211,13 @@ h1, h2, h3 {
 
 .hero-buttons {
     display: flex;
-    gap: 0.7rem;
     flex-wrap: wrap;
+    gap: 0.7rem;
     justify-content: center;
     align-items: center;
     width: 100%;
     margin-top: 0.2rem;
-    margin-bottom: 0.5rem; /* afegit per reduir espai sota els botons */
+    margin-bottom: 0.5rem;
 }
 
 .cta-button {
@@ -1237,81 +1237,37 @@ h1, h2, h3 {
     }
 }
 
-@media (max-width: 480px) {
-    .language-selector {
-        right: 60px;
+/* HERO BUTTONS - Responsive i sense sobreposar-se */
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 0.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-buttons .cta-button {
+    /* Per defecte, botons alineats i separats */
+    min-width: 140px;
+    margin: 0;
+}
+
+@media (max-width: 700px) {
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.1rem;
     }
-    
-    .language-current {
-        padding: 6px 10px;
-        font-size: 0.8rem;
-        min-width: 60px;
-    }
-    
-    .language-current::after {
-        font-size: 0.5rem;
-        margin-left: 4px;
-    }
-    
-    .about-header h2 {
-        font-size: 1.8rem;
-    }
-    
-    .about-visual-story {
-        gap: 1rem;
-    }
-    
-    .story-overlay {
-        padding: 1rem;
-    }
-    
-    .story-overlay h3 {
-        font-size: 1.1rem;
-        margin-bottom: 0.3rem;
-    }
-    
-    .story-overlay p {
-        font-size: 0.8rem;
-    }
-    
-    .story-large .story-image img,
-    .story-medium .story-image img,
-    .story-wide .story-image img,
-    .story-panoramic .story-image img,
-    .story-small .story-image img,
-    .story-accent .story-image img {
-        max-width: 95vw;
-        max-height: 60vh;
-    }
-    
-    .hero h1 {
-        font-size: 2rem;
-    }
-    
-    .cta-button {
+    .hero-buttons .cta-button {
         width: 100%;
-        max-width: 250px;
-    }
-    
-    .menu-simple {
-        padding: 1.5rem 1rem;
-        margin: 0 10px;
-    }
-    
-    .menu-category-title {
-        font-size: 1.3rem;
-    }
-    
-    .menu-item-name {
-        font-size: 1rem;
-    }
-    
-    .exp-img-large {
-        width: 250px;
-    }
-    
-    .exp-img-medium {
-        width: 160px;
+        max-width: 340px;
+        min-width: 0;
+        margin: 0 auto;
+        box-sizing: border-box;
+        display: block;
     }
 }
 
@@ -1404,60 +1360,27 @@ h1, h2, h3 {
 
 .hero-buttons {
     display: flex;
-    gap: 0.7rem;
     flex-wrap: wrap;
+    gap: 0.7rem;
     justify-content: center;
     align-items: center;
     width: 100%;
     margin-top: 0.2rem;
-    margin-bottom: 0.5rem; /* afegit per reduir espai sota els botons */
+    margin-bottom: 0.5rem;
 }
 
-.cta-button {
-    padding: 12px 22px;
-    border: none;
-    border-radius: 30px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.3s;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 600;
-    box-shadow: 0 2px 12px rgba(30,58,95,0.10);
-    margin: 0 auto;
-    outline: none;
-    background: var(--gold);
-    color: var(--navy-blue);
-    border: 2px solid var(--gold);
-    min-width: 120px;
-}
-
-.cta-button.primary {
-    background: var(--gold);
-    color: var(--navy-blue);
-    border: 2px solid var(--gold);
-}
-
-.cta-button.primary:hover,
-.cta-button.primary:focus {
-    background: var(--navy-blue);
-    color: var(--gold);
-    border-color: var(--gold);
-}
-
-.cta-button.secondary {
-    background: var(--navy-blue);
-    color: var(--gold);
-    border: 2px solid var(--gold);
-}
-
-.cta-button.secondary:hover,
-.cta-button.secondary:focus {
-    background: var(--gold);
-    color: var(--navy-blue);
-    border-color: var(--gold);
+@media (max-width: 600px) {
+    .hero-buttons {
+        flex-direction: column;
+        gap: 0.7rem;
+        align-items: stretch;
+    }
+    .hero-buttons .cta-button {
+        width: 100%;
+        max-width: 320px;
+        min-width: 0;
+        margin: 0 auto;
+    }
 }
 
 /* --- MOBILE HERO ESTÈTICA DIFERENT --- */
@@ -1610,6 +1533,83 @@ h1, h2, h3 {
 }
 
 .visual-menu-price {
+    font-size: 1.12rem;
+    color: var(--gold);
+    font-weight: 700;
+    margin-top: 0.2rem;
+    text-align: right;
+}
+
+@media (max-width: 900px) {
+    .visual-menu-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.2rem;
+        padding: 1rem 0;
+    }
+}
+@media (max-width: 600px) {
+    .visual-menu-grid {
+        grid-template-columns: 1fr;
+        gap: 0.7rem;
+        padding: 0.5rem 0;
+    }
+    .visual-menu-info {
+        padding: 0.8rem 0.7rem 0.7rem 0.7rem;
+    }
+    .visual-menu-info h3 {
+        font-size: 1.04rem;
+    }
+    .visual-menu-desc {
+        font-size: 0.93rem;
+    }
+    .visual-menu-price {
+        font-size: 1rem;
+    }
+}
+
+/* Selector de tipus de menú (btnMenuSimple i btnMenuVisual) */
+.menu-type-selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.menu-type-selector .cta-button {
+    min-width: 140px;
+    margin: 0;
+}
+
+@media (max-width: 700px) {
+    .menu-type-selector {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.1rem;
+    }
+    .menu-type-selector .cta-button {
+        width: 100%;
+        max-width: 340px;
+        min-width: 0;
+        margin: 0 auto;
+        box-sizing: border-box;
+        display: block;
+    }
+}
+    .visual-menu-info {
+        padding: 0.8rem 0.7rem 0.7rem 0.7rem;
+    }
+    .visual-menu-info h3 {
+        font-size: 1.04rem;
+    }
+    .visual-menu-desc {
+        font-size: 0.93rem;
+    }
+    .visual-menu-price {
+        font-size: 1rem;
+    }
+}
     font-size: 1.12rem;
     color: var(--gold);
     font-weight: 700;
