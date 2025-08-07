@@ -34,166 +34,134 @@
         </div>
     </nav>
 
-    <section id="inicio" class="hero">
-        <div class="hero-content">
+    <section id="inicio" class="hero hero-bg">
+        <div class="hero-overlay"></div>
+        <div class="hero-content hero-content-overlay">
             <h1 data-translate="hero.title">Bellafila</h1>
-            <p data-translate="hero.subtitle">Experiència culinària clàssica amb un toc modern</p>
+            <p data-translate="hero.subtitle">
+                <span>
+                    Experiència culinària clàssica<br>
+                    amb un toc modern
+                </span>
+            </p>
             <div class="hero-buttons">
                 <button class="cta-button primary" onclick="scrollToSection('reservas')" data-translate="hero.reserve">Reservar Taula</button>
                 <button class="cta-button secondary" onclick="window.location.href='menu.html'" data-translate="hero.menu">Veure Menú</button>
             </div>
-        </div>
-        <div class="hero-image">
-            <img src="Img/Rest_1.jpg" alt="Restaurant Bellafila">
-        </div>
-    </section>
-
-    <section id="menu" class="menu-section">
-        <div class="container">
-            <h2 data-translate="menu.title">El Nostre Menú</h2>
-            <div class="menu-simple">
-                <!-- Para Picar -->
-                <div class="menu-category-simple">
-                    <h3 class="menu-category-title" data-translate="menu.appetizers.title">Per Picar</h3>
-                    <div class="menu-items-simple">
-                        <div class="menu-item-simple">
-                            <div class="menu-item-info">
-                                <div class="menu-item-name" data-translate="menu.appetizers.item1.name">Croqueta de gamba</div>
-                            </div>
-                            <div class="menu-item-price">4,5€</div>
-                        </div>
-                        <div class="menu-item-simple">
-                            <div class="menu-item-info">
-                                <div class="menu-item-name" data-translate="menu.appetizers.item2.name">Snack de oreja de cerdo</div>
-                            </div>
-                            <div class="menu-item-price">7,5€</div>
-                        </div>
-                        <div class="menu-item-simple">
-                            <div class="menu-item-info">
-                                <div class="menu-item-name" data-translate="menu.appetizers.item3.name">Anchoa del Cantábrico con aceite de oliva</div>
-                            </div>
-                            <div class="menu-item-price">7€</div>
-                        </div>
-                        <div class="menu-item-simple">
-                            <div class="menu-item-info">
-                                <div class="menu-item-name" data-translate="menu.appetizers.item4.name">Ostra con cereza</div>
-                            </div>
-                            <div class="menu-item-price">4,75€</div>
-                        </div>
-                        <div class="menu-item-simple">
-                            <div class="menu-item-info">
-                                <div class="menu-item-name" data-translate="menu.appetizers.item5.name">Anguila ahumada con manzana escalivada y col</div>
-                            </div>
-                            <div class="menu-item-price">14€</div>
-                        </div>
-                        <div class="menu-item-simple">
-                            <div class="menu-item-info">
-                                <div class="menu-item-name" data-translate="menu.appetizers.item6.name">Sobrasada de Xesc Reina</div>
-                            </div>
-                            <div class="menu-item-price">14€</div>
-                        </div>
-                        <div class="menu-item-simple">
-                            <div class="menu-item-info">
-                                <div class="menu-item-name" data-translate="menu.appetizers.item7.name">Jamón ibérico 100% de bellota cortado a mano</div>
-                            </div>
-                            <div class="menu-item-price">28€</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Entrantes -->
-                <div class="menu-category-simple">
-                    <h3 class="menu-category-title" data-translate="menu.starters.title">Entrants</h3>
-                    <div class="menu-items-simple">
-                        <div class="menu-item-simple">
-                            <div class="menu-item-info">
-                                <div class="menu-item-name" data-translate="menu.starters.item1.name">Ensalada Bellafila</div>
-                            </div>
-                            <div class="menu-item-price">9,5€</div>
-                        </div>
-                        <div class="menu-item-simple">
-                            <div class="menu-item-info">
-                                <div class="menu-item-name" data-translate="menu.starters.item2.name">Lengua de ternera en escabeche</div>
-                            </div>
-                            <div class="menu-item-price">15€</div>
-                        </div>
-                        <div class="menu-item-simple">
-                            <div class="menu-item-info">
-                                <div class="menu-item-name" data-translate="menu.starters.item3.name">Steak tartare</div>
-                            </div>
-                            <div class="menu-item-price">19€</div>
-                        </div>
-                        <div class="menu-item-simple">
-                            <div class="menu-item-info">
-                                <div class="menu-item-name" data-translate="menu.starters.item4.name">Cazuelita de garbanzos con almejas</div>
-                            </div>
-                            <div class="menu-item-price">17€</div>
-                        </div>
-                        <div class="menu-item-simple">
-                            <div class="menu-item-info">
-                                <div class="menu-item-name" data-translate="menu.starters.item5.name">Tortilla de setas de temporada</div>
-                            </div>
-                            <div class="menu-item-price">16,5€</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Lo que no te puedes perder -->
-                <div class="menu-category-simple">
-                    <h3 class="menu-category-title" data-translate="menu.specials.title">El que no et pots perdre</h3>
-                    <div class="menu-items-simple">
-                        <div class="menu-item-simple">
-                            <div class="menu-item-info">
-                                <div class="menu-item-name" data-translate="menu.specials.item1.name">Sardinas marinadas con uvas</div>
-                            </div>
-                            <div class="menu-item-price">12€</div>
-                        </div>
-                        <div class="menu-item-simple">
-                            <div class="menu-item-info">
-                                <div class="menu-item-name" data-translate="menu.specials.item2.name">Costillitas de conejo al ron</div>
-                            </div>
-                            <div class="menu-item-price">12,5€</div>
-                        </div>
-                        <div class="menu-item-simple">
-                            <div class="menu-item-info">
-                                <div class="menu-item-name" data-translate="menu.specials.item3.name">Canalón trufado de pato</div>
-                            </div>
-                            <div class="menu-item-price">18€</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Pescado -->
-                <div class="menu-category-simple">
-                    <h3 class="menu-category-title" data-translate="menu.fish.title">Peix</h3>
-                    <div class="menu-items-simple">
-                        <div class="menu-item-simple">
-                            <div class="menu-item-info">
-                                <div class="menu-item-name" data-translate="menu.fish.item1.name">Morro de bacalao confitado de invierno</div>
-                            </div>
-                            <div class="menu-item-price">24€</div>
-                        </div>
-                        <div class="menu-item-simple">
-                            <div class="menu-item-info">
-                                <div class="menu-item-name" data-translate="menu.fish.item2.name">Calamares rellenos</div>
-                            </div>
-                            <div class="menu-item-price">26€</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="menu-cta">
-                    <a href="menu.html" class="menu-link" data-translate="menu.viewComplete">Veure Menú Complet</a>
-                </div>
+            <div class="hero-down-arrow" onclick="scrollToSection('about-section')" title="Desplaça cap avall">
+                <svg viewBox="0 0 40 40">
+                    <path d="M20 28c-.5 0-1-.2-1.4-.6l-10-10a2 2 0 1 1 2.8-2.8L20 23.2l8.6-8.6a2 2 0 1 1 2.8 2.8l-10 10c-.4.4-.9.6-1.4.6z"/>
+                </svg>
             </div>
         </div>
     </section>
 
-    <section id="galeria" class="gallery-section">
+    <section class="about-section">
         <div class="container">
-            <h2 data-translate="gallery.title">Galeria</h2>
-            <div class="gallery-grid" id="galleryGrid">
-                <!-- Las imágenes se cargarán dinámicamente -->
+            <div class="about-header">
+                <h2 data-translate="about.title">Sobre Bellafila</h2>
+                <p data-translate="about.subtitle">Un espai únic on la tradició i la innovació es troben</p>
+            </div>
+            
+            <div class="about-visual-story">
+                <div class="story-item story-large">
+                    <div class="story-image">
+                        <img src="Img/Rest_2.jpg" alt="Interior principal" loading="lazy">
+                        <div class="story-overlay">
+                            <h3 data-translate="about.interior.title">Ambient Elegant</h3>
+                            <p data-translate="about.interior.text">Espais dissenyats per crear experiències úniques</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="story-row">
+                    <div class="story-item story-medium">
+                        <div class="story-image">
+                            <img src="Img/Rest_4.jpg" alt="Detalls decoratius" loading="lazy">
+                            <div class="story-overlay">
+                                <h3 data-translate="about.decoration.title">Detalls Únics</h3>
+                                <p data-translate="about.decoration.text">Cada racó conta una història</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-item story-medium">
+                        <div class="story-image">
+                            <img src="Img/Rest_5.jpg" alt="Ambient acollidor" loading="lazy">
+                            <div class="story-overlay">
+                                <h3 data-translate="about.atmosphere.title">Calidesa</h3>
+                                <p data-translate="about.atmosphere.text">Un refugi gastronòmic</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="story-featured">
+                    <div class="story-item story-wide">
+                        <div class="story-image">
+                            <img src="Img/Rest_10.jpg" alt="Sala principal" loading="lazy">
+                            <div class="story-overlay story-overlay-center">
+                                <h3 data-translate="about.dining.title">Sala Principal</h3>
+                                <p data-translate="about.dining.text">L'epicentre de l'experiència Bellafila</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="story-grid">
+                    <div class="story-item story-small">
+                        <div class="story-image">
+                            <img src="Img/Rest_6.jpg" alt="Espai elegant" loading="lazy">
+                            <div class="story-overlay">
+                                <h3 data-translate="about.elegance.title">Sofisticació</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-item story-small">
+                        <div class="story-image">
+                            <img src="Img/Rest_7.jpg" alt="Detalls interiors" loading="lazy">
+                            <div class="story-overlay">
+                                <h3 data-translate="about.design.title">Disseny</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-item story-small">
+                        <div class="story-image">
+                            <img src="Img/Rest_9.jpg" alt="Decoració única" loading="lazy">
+                            <div class="story-overlay">
+                                <h3 data-translate="about.style.title">Estil</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-item story-small">
+                        <div class="story-image">
+                            <img src="Img/Rest_11.jpg" alt="Ambient refinat" loading="lazy">
+                            <div class="story-overlay">
+                                <h3 data-translate="about.refinement.title">Refinament</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="story-final">
+                    <div class="story-item story-panoramic">
+                        <div class="story-image">
+                            <img src="Img/Rest_17.jpg" alt="Vista panoràmica" loading="lazy">
+                            <div class="story-overlay story-overlay-bottom">
+                                <h3 data-translate="about.experience.title">Una Experiència Completa</h3>
+                                <p data-translate="about.experience.text">On cada moment es converteix en un record especial</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-item story-accent">
+                        <div class="story-image">
+                            <img src="Img/Rest_18.jpg" alt="Detall arquitectònic" loading="lazy">
+                            <div class="story-overlay">
+                                <h3 data-translate="about.architecture.title">Arquitectura</h3>
+                                <p data-translate="about.architecture.text">Bellesa en cada detall</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
