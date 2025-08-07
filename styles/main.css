@@ -1382,6 +1382,26 @@ h1, h2, h3 {
     word-break: break-word;
 }
 
+/* Hero subtitle: assegura que el text no sobrepassi el padding i separació amb botons */
+.hero-content-overlay p[data-translate="hero.subtitle"] {
+    max-width: 100%;
+    box-sizing: border-box;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0 auto 2.2rem auto;
+    width: 100%;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Si vols també pots afegir: */
+.hero-content-overlay p[data-translate="hero.subtitle"] span {
+    display: inline-block;
+    max-width: 100%;
+    box-sizing: border-box;
+    word-break: break-word;
+}
+
 .hero-buttons {
     display: flex;
     gap: 0.7rem;
