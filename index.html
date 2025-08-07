@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="ca">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bellafila - Restaurante</title>
+    <title>Bellafila - Restaurant</title>
     <link rel="stylesheet" href="styles/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
@@ -17,18 +17,18 @@
                 <span></span>
             </div>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="#inicio" data-translate="nav.inicio">Inicio</a></li>
+                <li><a href="#inicio" data-translate="nav.inicio">Inici</a></li>
                 <li><a href="menu.html" data-translate="nav.menu">Menú</a></li>
-                <li><a href="#galeria" data-translate="nav.galeria">Galería</a></li>
-                <li><a href="#reservas" data-translate="nav.reservas">Reservas</a></li>
-                <li><a href="#contacto" data-translate="nav.contacto">Contacto</a></li>
+                <li><a href="#galeria" data-translate="nav.galeria">Galeria</a></li>
+                <li><a href="#reservas" data-translate="nav.reservas">Reserves</a></li>
+                <li><a href="#contacto" data-translate="nav.contacto">Contacte</a></li>
             </ul>
             <div class="language-selector">
                 <select id="languageSelect" onchange="changeLanguage(this.value)">
-                    <option value="es">🇪🇸 ES</option>
-                    <option value="ca">🏴 CA</option>
-                    <option value="en">🇬🇧 EN</option>
-                    <option value="fr">🇫🇷 FR</option>
+                    <option value="ca">CA</option>
+                    <option value="es">ES</option>
+                    <option value="en">EN</option>
+                    <option value="fr">FR</option>
                 </select>
             </div>
         </div>
@@ -37,29 +37,161 @@
     <section id="inicio" class="hero">
         <div class="hero-content">
             <h1 data-translate="hero.title">Bellafila</h1>
-            <p data-translate="hero.subtitle">Experiencia culinaria clásica con un toque moderno</p>
+            <p data-translate="hero.subtitle">Experiència culinària clàssica amb un toc modern</p>
             <div class="hero-buttons">
-                <button class="cta-button primary" onclick="scrollToSection('reservas')" data-translate="hero.reserve">Reservar Mesa</button>
-                <button class="cta-button secondary" onclick="window.location.href='menu.html'" data-translate="hero.menu">Ver Menú</button>
+                <button class="cta-button primary" onclick="scrollToSection('reservas')" data-translate="hero.reserve">Reservar Taula</button>
+                <button class="cta-button secondary" onclick="window.location.href='menu.html'" data-translate="hero.menu">Veure Menú</button>
             </div>
         </div>
         <div class="hero-image">
-            <img src="Img/Rest_1.jpg" alt="Restaurante Bellafila">
+            <img src="Img/Rest_1.jpg" alt="Restaurant Bellafila">
         </div>
     </section>
 
     <section id="menu" class="menu-section">
         <div class="container">
-            <h2>Nuestro Menú</h2>
-            <div class="menu-grid" id="menuGrid">
-                <!-- Los platos se cargarán dinámicamente -->
+            <h2 data-translate="menu.title">El Nostre Menú</h2>
+            <div class="menu-simple">
+                <!-- Para Picar -->
+                <div class="menu-category-simple">
+                    <h3 class="menu-category-title" data-translate="menu.appetizers.title">Per Picar</h3>
+                    <div class="menu-items-simple">
+                        <div class="menu-item-simple">
+                            <div class="menu-item-info">
+                                <div class="menu-item-name" data-translate="menu.appetizers.item1.name">Croqueta de gamba</div>
+                            </div>
+                            <div class="menu-item-price">4,5€</div>
+                        </div>
+                        <div class="menu-item-simple">
+                            <div class="menu-item-info">
+                                <div class="menu-item-name" data-translate="menu.appetizers.item2.name">Snack de oreja de cerdo</div>
+                            </div>
+                            <div class="menu-item-price">7,5€</div>
+                        </div>
+                        <div class="menu-item-simple">
+                            <div class="menu-item-info">
+                                <div class="menu-item-name" data-translate="menu.appetizers.item3.name">Anchoa del Cantábrico con aceite de oliva</div>
+                            </div>
+                            <div class="menu-item-price">7€</div>
+                        </div>
+                        <div class="menu-item-simple">
+                            <div class="menu-item-info">
+                                <div class="menu-item-name" data-translate="menu.appetizers.item4.name">Ostra con cereza</div>
+                            </div>
+                            <div class="menu-item-price">4,75€</div>
+                        </div>
+                        <div class="menu-item-simple">
+                            <div class="menu-item-info">
+                                <div class="menu-item-name" data-translate="menu.appetizers.item5.name">Anguila ahumada con manzana escalivada y col</div>
+                            </div>
+                            <div class="menu-item-price">14€</div>
+                        </div>
+                        <div class="menu-item-simple">
+                            <div class="menu-item-info">
+                                <div class="menu-item-name" data-translate="menu.appetizers.item6.name">Sobrasada de Xesc Reina</div>
+                            </div>
+                            <div class="menu-item-price">14€</div>
+                        </div>
+                        <div class="menu-item-simple">
+                            <div class="menu-item-info">
+                                <div class="menu-item-name" data-translate="menu.appetizers.item7.name">Jamón ibérico 100% de bellota cortado a mano</div>
+                            </div>
+                            <div class="menu-item-price">28€</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Entrantes -->
+                <div class="menu-category-simple">
+                    <h3 class="menu-category-title" data-translate="menu.starters.title">Entrants</h3>
+                    <div class="menu-items-simple">
+                        <div class="menu-item-simple">
+                            <div class="menu-item-info">
+                                <div class="menu-item-name" data-translate="menu.starters.item1.name">Ensalada Bellafila</div>
+                            </div>
+                            <div class="menu-item-price">9,5€</div>
+                        </div>
+                        <div class="menu-item-simple">
+                            <div class="menu-item-info">
+                                <div class="menu-item-name" data-translate="menu.starters.item2.name">Lengua de ternera en escabeche</div>
+                            </div>
+                            <div class="menu-item-price">15€</div>
+                        </div>
+                        <div class="menu-item-simple">
+                            <div class="menu-item-info">
+                                <div class="menu-item-name" data-translate="menu.starters.item3.name">Steak tartare</div>
+                            </div>
+                            <div class="menu-item-price">19€</div>
+                        </div>
+                        <div class="menu-item-simple">
+                            <div class="menu-item-info">
+                                <div class="menu-item-name" data-translate="menu.starters.item4.name">Cazuelita de garbanzos con almejas</div>
+                            </div>
+                            <div class="menu-item-price">17€</div>
+                        </div>
+                        <div class="menu-item-simple">
+                            <div class="menu-item-info">
+                                <div class="menu-item-name" data-translate="menu.starters.item5.name">Tortilla de setas de temporada</div>
+                            </div>
+                            <div class="menu-item-price">16,5€</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lo que no te puedes perder -->
+                <div class="menu-category-simple">
+                    <h3 class="menu-category-title" data-translate="menu.specials.title">El que no et pots perdre</h3>
+                    <div class="menu-items-simple">
+                        <div class="menu-item-simple">
+                            <div class="menu-item-info">
+                                <div class="menu-item-name" data-translate="menu.specials.item1.name">Sardinas marinadas con uvas</div>
+                            </div>
+                            <div class="menu-item-price">12€</div>
+                        </div>
+                        <div class="menu-item-simple">
+                            <div class="menu-item-info">
+                                <div class="menu-item-name" data-translate="menu.specials.item2.name">Costillitas de conejo al ron</div>
+                            </div>
+                            <div class="menu-item-price">12,5€</div>
+                        </div>
+                        <div class="menu-item-simple">
+                            <div class="menu-item-info">
+                                <div class="menu-item-name" data-translate="menu.specials.item3.name">Canalón trufado de pato</div>
+                            </div>
+                            <div class="menu-item-price">18€</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pescado -->
+                <div class="menu-category-simple">
+                    <h3 class="menu-category-title" data-translate="menu.fish.title">Peix</h3>
+                    <div class="menu-items-simple">
+                        <div class="menu-item-simple">
+                            <div class="menu-item-info">
+                                <div class="menu-item-name" data-translate="menu.fish.item1.name">Morro de bacalao confitado de invierno</div>
+                            </div>
+                            <div class="menu-item-price">24€</div>
+                        </div>
+                        <div class="menu-item-simple">
+                            <div class="menu-item-info">
+                                <div class="menu-item-name" data-translate="menu.fish.item2.name">Calamares rellenos</div>
+                            </div>
+                            <div class="menu-item-price">26€</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-cta">
+                    <a href="menu.html" class="menu-link" data-translate="menu.viewComplete">Veure Menú Complet</a>
+                </div>
             </div>
         </div>
     </section>
 
     <section id="galeria" class="gallery-section">
         <div class="container">
-            <h2 data-translate="gallery.title">Galería</h2>
+            <h2 data-translate="gallery.title">Galeria</h2>
             <div class="gallery-grid" id="galleryGrid">
                 <!-- Las imágenes se cargarán dinámicamente -->
             </div>
@@ -68,16 +200,16 @@
 
     <section id="reservas" class="reservation-section">
         <div class="container">
-            <h2 data-translate="reservations.title">Realizar Reserva</h2>
+            <h2 data-translate="reservations.title">Fer Reserva</h2>
             <form id="reservationForm" class="reservation-form">
                 <div class="form-group">
-                    <input type="text" id="nombre" name="nombre" data-placeholder="reservations.name" placeholder="Nombre completo" required>
+                    <input type="text" id="nombre" name="nombre" data-placeholder="reservations.name" placeholder="Nom complet" required>
                 </div>
                 <div class="form-group">
                     <input type="email" id="email" name="email" data-placeholder="reservations.email" placeholder="Email" required>
                 </div>
                 <div class="form-group">
-                    <input type="tel" id="telefono" name="telefono" data-placeholder="reservations.phone" placeholder="Teléfono" required>
+                    <input type="tel" id="telefono" name="telefono" data-placeholder="reservations.phone" placeholder="Telèfon" required>
                 </div>
                 <div class="form-row">
                     <div class="form-group">
@@ -88,18 +220,18 @@
                     </div>
                     <div class="form-group">
                         <select id="personas" name="personas" required>
-                            <option value="" data-translate="reservations.people">Personas</option>
+                            <option value="" data-translate="reservations.people">Persones</option>
                             <option value="1" data-translate="reservations.people1">1 persona</option>
-                            <option value="2" data-translate="reservations.people2">2 personas</option>
-                            <option value="3" data-translate="reservations.people3">3 personas</option>
-                            <option value="4" data-translate="reservations.people4">4 personas</option>
-                            <option value="5" data-translate="reservations.people5">5 personas</option>
-                            <option value="6" data-translate="reservations.people6">6+ personas</option>
+                            <option value="2" data-translate="reservations.people2">2 persones</option>
+                            <option value="3" data-translate="reservations.people3">3 persones</option>
+                            <option value="4" data-translate="reservations.people4">4 persones</option>
+                            <option value="5" data-translate="reservations.people5">5 persones</option>
+                            <option value="6" data-translate="reservations.people6">6+ persones</option>
                         </select>
                     </div>
                 </div>
                 <div class="form-group">
-                    <textarea id="comentarios" name="comentarios" data-placeholder="reservations.comments" placeholder="Comentarios especiales (opcional)"></textarea>
+                    <textarea id="comentarios" name="comentarios" data-placeholder="reservations.comments" placeholder="Comentaris especials (opcional)"></textarea>
                 </div>
                 <button type="submit" class="submit-button" data-translate="reservations.submit">Confirmar Reserva</button>
             </form>
@@ -110,16 +242,16 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3 data-translate="footer.contact">Contacto</h3>
-                    <p data-translate="footer.address">📍 Dirección del Restaurante</p>
+                    <h3 data-translate="footer.contact">Contacte</h3>
+                    <p data-translate="footer.address">📍 Adreça del Restaurant</p>
                     <p data-translate="footer.phone">📞 +34 XXX XXX XXX</p>
                     <p data-translate="footer.email">✉️ info@bellafila.com</p>
                 </div>
                 <div class="footer-section">
-                    <h3 data-translate="footer.hours">Horarios</h3>
-                    <p data-translate="footer.weekdays">Lunes - Viernes: 12:00 - 23:00</p>
-                    <p data-translate="footer.saturday">Sábados: 12:00 - 24:00</p>
-                    <p data-translate="footer.sunday">Domingos: 12:00 - 22:00</p>
+                    <h3 data-translate="footer.hours">Horaris</h3>
+                    <p data-translate="footer.weekdays">Dilluns - Divendres: 12:00 - 23:00</p>
+                    <p data-translate="footer.saturday">Dissabtes: 12:00 - 24:00</p>
+                    <p data-translate="footer.sunday">Diumenges: 12:00 - 22:00</p>
                 </div>
             </div>
         </div>

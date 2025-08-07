@@ -89,6 +89,39 @@ const translations = {
             weekdays: 'Lunes - Viernes: 12:00 - 23:00',
             saturday: 'Sábados: 12:00 - 24:00',
             sunday: 'Domingos: 12:00 - 22:00'
+        },
+        menu: {
+            title: 'Nuestro Menú',
+            viewComplete: 'Ver Menú Completo',
+            appetizers: {
+                title: 'Para Picar',
+                item1: { name: 'Croqueta de gamba' },
+                item2: { name: 'Snack de oreja de cerdo' },
+                item3: { name: 'Anchoa del Cantábrico con aceite de oliva' },
+                item4: { name: 'Ostra con cereza' },
+                item5: { name: 'Anguila ahumada con manzana escalivada y col' },
+                item6: { name: 'Sobrasada de Xesc Reina' },
+                item7: { name: 'Jamón ibérico 100% de bellota cortado a mano' }
+            },
+            starters: {
+                title: 'Entrantes',
+                item1: { name: 'Ensalada Bellafila' },
+                item2: { name: 'Lengua de ternera en escabeche' },
+                item3: { name: 'Steak tartare' },
+                item4: { name: 'Cazuelita de garbanzos con almejas' },
+                item5: { name: 'Tortilla de setas de temporada' }
+            },
+            specials: {
+                title: 'Lo que no te puedes perder',
+                item1: { name: 'Sardinas marinadas con uvas' },
+                item2: { name: 'Costillitas de conejo al ron' },
+                item3: { name: 'Canalón trufado de pato' }
+            },
+            fish: {
+                title: 'Pescado',
+                item1: { name: 'Morro de bacalao confitado de invierno' },
+                item2: { name: 'Calamares rellenos' }
+            }
         }
     },
     ca: {
@@ -135,6 +168,39 @@ const translations = {
             weekdays: 'Dilluns - Divendres: 12:00 - 23:00',
             saturday: 'Dissabtes: 12:00 - 24:00',
             sunday: 'Diumenges: 12:00 - 22:00'
+        },
+        menu: {
+            title: 'El Nostre Menú',
+            viewComplete: 'Veure Menú Complet',
+            appetizers: {
+                title: 'Per Picar',
+                item1: { name: 'Croqueta de gamba' },
+                item2: { name: 'Snack d\'orella de porc' },
+                item3: { name: 'Anxova del Cantàbric amb oli d\'oliva' },
+                item4: { name: 'Ostra amb cirera' },
+                item5: { name: 'Anguila fumada amb poma escalibada i col' },
+                item6: { name: 'Sobrassada d\'en Xesc Reina' },
+                item7: { name: 'Pernil ibèric 100% de aglà tallat a mà' }
+            },
+            starters: {
+                title: 'Entrants',
+                item1: { name: 'Amanida Bellafila' },
+                item2: { name: 'Llengua de vedella en escabetx' },
+                item3: { name: 'Steak tartare' },
+                item4: { name: 'Olleta de cigrons amb cloïsses' },
+                item5: { name: 'Truita de bolets de temporada' }
+            },
+            specials: {
+                title: 'El que no et pots perdre',
+                item1: { name: 'Sardines marinades amb raïm' },
+                item2: { name: 'Costelletes de conill al rom' },
+                item3: { name: 'Canaló trufat d\'ànec' }
+            },
+            fish: {
+                title: 'Peix',
+                item1: { name: 'Morro de bacallà confitat d\'hivern' },
+                item2: { name: 'Calamars farcits' }
+            }
         }
     },
     en: {
@@ -181,6 +247,39 @@ const translations = {
             weekdays: 'Monday - Friday: 12:00 - 23:00',
             saturday: 'Saturday: 12:00 - 24:00',
             sunday: 'Sunday: 12:00 - 22:00'
+        },
+        menu: {
+            title: 'Our Menu',
+            viewComplete: 'View Complete Menu',
+            appetizers: {
+                title: 'To Share',
+                item1: { name: 'Shrimp croquette' },
+                item2: { name: 'Pork ear snack' },
+                item3: { name: 'Cantabrian anchovy with olive oil' },
+                item4: { name: 'Oyster with cherry' },
+                item5: { name: 'Smoked eel with roasted apple and cabbage' },
+                item6: { name: 'Xesc Reina sobrasada' },
+                item7: { name: '100% acorn-fed Iberian ham hand-cut' }
+            },
+            starters: {
+                title: 'Starters',
+                item1: { name: 'Bellafila salad' },
+                item2: { name: 'Beef tongue in marinade' },
+                item3: { name: 'Steak tartare' },
+                item4: { name: 'Small pot of chickpeas with clams' },
+                item5: { name: 'Seasonal mushroom omelet' }
+            },
+            specials: {
+                title: 'Must Try',
+                item1: { name: 'Marinated sardines with grapes' },
+                item2: { name: 'Rabbit ribs with rum' },
+                item3: { name: 'Truffle duck cannelloni' }
+            },
+            fish: {
+                title: 'Fish',
+                item1: { name: 'Winter confit cod cheek' },
+                item2: { name: 'Stuffed squid' }
+            }
         }
     },
     fr: {
@@ -227,11 +326,44 @@ const translations = {
             weekdays: 'Lundi - Vendredi: 12:00 - 23:00',
             saturday: 'Samedi: 12:00 - 24:00',
             sunday: 'Dimanche: 12:00 - 22:00'
+        },
+        menu: {
+            title: 'Notre Menu',
+            viewComplete: 'Voir Menu Complet',
+            appetizers: {
+                title: 'À Partager',
+                item1: { name: 'Croquette de crevette' },
+                item2: { name: 'Snack d\'oreille de porc' },
+                item3: { name: 'Anchois du Cantabrique à l\'huile d\'olive' },
+                item4: { name: 'Huître à la cerise' },
+                item5: { name: 'Anguille fumée aux pommes rôties et chou' },
+                item6: { name: 'Sobrasada de Xesc Reina' },
+                item7: { name: 'Jambon ibérique 100% bellota coupé à la main' }
+            },
+            starters: {
+                title: 'Entrées',
+                item1: { name: 'Salade Bellafila' },
+                item2: { name: 'Langue de veau en escabèche' },
+                item3: { name: 'Steak tartare' },
+                item4: { name: 'Petite casserole de pois chiches aux palourdes' },
+                item5: { name: 'Omelette aux champignons de saison' }
+            },
+            specials: {
+                title: 'À Ne Pas Manquer',
+                item1: { name: 'Sardines marinées aux raisins' },
+                item2: { name: 'Côtelettes de lapin au rhum' },
+                item3: { name: 'Cannelloni de canard truffé' }
+            },
+            fish: {
+                title: 'Poisson',
+                item1: { name: 'Joue de morue confite d\'hiver' },
+                item2: { name: 'Calamars farcis' }
+            }
         }
     }
 };
 
-let currentLanguage = 'es';
+let currentLanguage = 'ca'; // Cambiar el idioma por defecto a Catalán
 
 document.addEventListener('DOMContentLoaded', function() {
     setupLanguageSelector();
@@ -245,20 +377,70 @@ document.addEventListener('DOMContentLoaded', function() {
 // Configurar selector de idioma
 function setupLanguageSelector() {
     // Solo agregar si no existe ya
-    if (document.querySelector('.language-selector')) return;
+    if (document.querySelector('.language-dropdown')) return;
     
     const navbar = document.querySelector('.nav-container');
     const languageSelector = document.createElement('div');
     languageSelector.className = 'language-selector';
     languageSelector.innerHTML = `
-        <select id="languageSelect" onchange="changeLanguage(this.value)">
-            <option value="es">🇪🇸 ES</option>
-            <option value="ca">🏴 CA</option>
-            <option value="en">🇬🇧 EN</option>
-            <option value="fr">🇫🇷 FR</option>
-        </select>
+        <div class="language-dropdown" id="languageDropdown">
+            <div class="language-current" id="languageCurrent">CA</div>
+            <div class="language-options" id="languageOptions">
+                <button class="language-option selected" data-lang="ca">CA</button>
+                <button class="language-option" data-lang="es">ES</button>
+                <button class="language-option" data-lang="en">EN</button>
+                <button class="language-option" data-lang="fr">FR</button>
+            </div>
+        </div>
     `;
     navbar.appendChild(languageSelector);
+    
+    setupCustomDropdown();
+}
+
+// Configurar dropdown personalizado
+function setupCustomDropdown() {
+    const dropdown = document.getElementById('languageDropdown');
+    const current = document.getElementById('languageCurrent');
+    const options = document.getElementById('languageOptions');
+    
+    if (!dropdown || !current || !options) return;
+    
+    // Toggle dropdown
+    current.addEventListener('click', function(e) {
+        e.stopPropagation();
+        dropdown.classList.toggle('active');
+    });
+    
+    // Cerrar dropdown al hacer click fuera
+    document.addEventListener('click', function(e) {
+        if (!dropdown.contains(e.target)) {
+            dropdown.classList.remove('active');
+        }
+    });
+    
+    // Manejar selección de idioma
+    options.addEventListener('click', function(e) {
+        if (e.target.classList.contains('language-option')) {
+            const selectedLang = e.target.getAttribute('data-lang');
+            const selectedText = e.target.textContent;
+            
+            // Actualizar texto del botón actual
+            current.textContent = selectedText;
+            
+            // Actualizar clases selected
+            options.querySelectorAll('.language-option').forEach(opt => {
+                opt.classList.remove('selected');
+            });
+            e.target.classList.add('selected');
+            
+            // Cerrar dropdown
+            dropdown.classList.remove('active');
+            
+            // Cambiar idioma
+            changeLanguage(selectedLang);
+        }
+    });
 }
 
 // Cambiar idioma
