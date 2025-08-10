@@ -169,39 +169,39 @@
     <section id="reservas" class="reservation-section">
         <div class="container">
             <h2 data-translate="reservations.title">Fer Reserva</h2>
-            <form id="reservationForm" class="reservation-form">
-                <div class="form-group">
-                    <input type="text" id="nombre" name="nombre" data-placeholder="reservations.name" placeholder="Nom complet" required>
+            <div style="display:flex;justify-content:center;align-items:center;min-height:180px;">
+                <a href="https://widget.thefork.com/es/b83212db-f0da-4c1c-867c-34358417c85e?utm_source=lapalmadebellafila.com"
+                   class="cta-button primary"
+                   style="font-size:1.4rem;padding:1.2em 2.5em;border-radius:2em;text-align:center;"
+                   target="_blank" rel="noopener">
+                    Reserva online a TheFork
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacto" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 data-translate="footer.contact">Contacte</h3>
+                    <p data-translate="footer.address">📍 Adreça del Restaurant</p>
+                    <p data-translate="footer.phone">📞 +34 XXX XXX XXX</p>
+                    <p data-translate="footer.email">✉️ info@bellafila.com</p>
                 </div>
-                <div class="form-group">
-                    <input type="email" id="email" name="email" data-placeholder="reservations.email" placeholder="Email" required>
+                <div class="footer-section">
+                    <h3 data-translate="footer.hours">Horaris</h3>
+                    <p data-translate="footer.weekdays">Dilluns - Divendres: 12:00 - 23:00</p>
+                    <p data-translate="footer.saturday">Dissabtes: 12:00 - 24:00</p>
+                    <p data-translate="footer.sunday">Diumenges: 12:00 - 22:00</p>
                 </div>
-                <div class="form-group">
-                    <input type="tel" id="telefono" name="telefono" data-placeholder="reservations.phone" placeholder="Telèfon" required>
-                </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <input type="date" id="fecha" name="fecha" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="time" id="hora" name="hora" required>
-                    </div>
-                    <div class="form-group">
-                        <select id="personas" name="personas" required>
-                            <option value="" data-translate="reservations.people">Persones</option>
-                            <option value="1" data-translate="reservations.people1">1 persona</option>
-                            <option value="2" data-translate="reservations.people2">2 persones</option>
-                            <option value="3" data-translate="reservations.people3">3 persones</option>
-                            <option value="4" data-translate="reservations.people4">4 persones</option>
-                            <option value="5" data-translate="reservations.people5">5 persones</option>
-                            <option value="6" data-translate="reservations.people6">6+ persones</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <textarea id="comentarios" name="comentarios" data-placeholder="reservations.comments" placeholder="Comentaris especials (opcional)"></textarea>
-                </div>
-                <button type="submit" class="submit-button" data-translate="reservations.submit">Confirmar Reserva</button>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
             </form>
         </div>
     </section>

@@ -1597,25 +1597,6 @@ h1, h2, h3 {
         display: block;
     }
 }
-    .visual-menu-info {
-        padding: 0.8rem 0.7rem 0.7rem 0.7rem;
-    }
-    .visual-menu-info h3 {
-        font-size: 1.04rem;
-    }
-    .visual-menu-desc {
-        font-size: 0.93rem;
-    }
-    .visual-menu-price {
-        font-size: 1rem;
-    }
-}
-    font-size: 1.12rem;
-    color: var(--gold);
-    font-weight: 700;
-    margin-top: 0.2rem;
-    text-align: right;
-}
 
 @media (max-width: 900px) {
     .visual-menu-grid {
@@ -1642,4 +1623,72 @@ h1, h2, h3 {
     .visual-menu-price {
         font-size: 1rem;
     }
+}
+
+/* Estils bàsics pel calendari i el sistema pas a pas */
+.calendar-widget {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(30,58,95,0.08);
+    padding: 1.5rem 1rem;
+    max-width: 370px;
+    margin: 0 auto 2rem auto;
+}
+.calendar-header {
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--navy-blue);
+}
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.3rem;
+}
+.calendar-day {
+    text-align: center;
+    font-weight: 600;
+    color: var(--navy-blue);
+    padding-bottom: 0.2rem;
+}
+.calendar-cell {
+    background: var(--cream);
+    border: none;
+    border-radius: 8px;
+    padding: 0.6rem 0;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.calendar-cell:disabled {
+    background: #eee;
+    color: #bbb;
+    cursor: not-allowed;
+}
+.calendar-cell:hover:not(:disabled) {
+    background: var(--gold);
+    color: var(--navy-blue);
+}
+.reservation-step {
+    max-width: 370px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(30,58,95,0.08);
+    padding: 1.5rem 1rem;
+    text-align: center;
+}
+.reservation-success {
+    color: var(--navy-blue);
+    background: var(--gold);
+    border-radius: 10px;
+    padding: 1.2rem;
+    margin-top: 1.2rem;
+    font-weight: 600;
+}
+.reservation-error {
+    color: #b00;
+    margin-top: 1rem;
+    font-weight: 600;
 }
